@@ -15,7 +15,7 @@
 
 
 
-main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 
 	int cola_cg, cola_gc;
 	struct mensaje mensaje;
@@ -57,10 +57,10 @@ main(int argc, char* argv[]) {
 			}
 			while (fread (&mensaje.datos.persona, 
 				sizeof (struct persona ), 1, pf) == 1)
-				msgsnd(cola_gc, % mensaje, LONGITUD, 0);
+				msgsnd(cola_gc, &mensaje, LONGITUD, 0);
 				fclose(pf);
 				mensaje.orden = FIN;
-				msgsnd(cola_gc, % mensaje, LONGITUD, 0);
+				msgsnd(cola_gc, &mensaje, LONGITUD, 0);
 				break;
 
 		case ANNADIR:
