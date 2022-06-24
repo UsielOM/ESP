@@ -18,7 +18,7 @@
 
 
 
-main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 
 	int cola_cg, cola_gc, pid;
 	char opcion[256];
@@ -82,7 +82,7 @@ main(int argc, char* argv[]) {
 			exit(0);
 		default:
 			recibir = NO;
-			printf("Opcion [%c] erronea. \n");
+			printf("Opcion [&c] erronea. \n");
 			printf("Opciones disponibles: \n");
 			printf("\ta - añadir registros. \n");
 			printf("\tf - parar el programa gestor. \n");
