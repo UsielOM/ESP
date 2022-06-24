@@ -15,7 +15,7 @@
 
 
 
-main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 
 	int cola_cg, cola_gc;
 	struct mensaje mensaje;

@@ -23,13 +23,13 @@ main(int argc, char* argv[]) {
 	int cola_cg, cola_gc, pid;
 	char opcion[256];
 	int ncar;
-	struct mensjae mensaje;
+	struct mensaje mensaje;
 	key_t llave;
 	enum {NO, SI} recibir = NO;
 
 
 	llave = ftok(FICHERO_LLAVE, CLAVE_CLIENTE_GESTOR);
-	if ((cola_cg = msgget(llave. 0666)) == -1)
+	if ((cola_cg = msgget(llave, 0666)) == -1)
 	{
 		perror("msget");
 		exit(-1);
@@ -88,7 +88,7 @@ main(int argc, char* argv[]) {
 			printf("\tf - parar el programa gestor. \n");
 			printf("\tl - visualizar todos los registros. \n");
 			printf("\ts - parar el programa cliente . \n");
-			break;[]
+			
 		}
 		if(recibir == SI)
 			do {
@@ -102,7 +102,7 @@ main(int argc, char* argv[]) {
 						mensaje.datos.persona.nombre);
 					printf("\tDireccion: %s\n",
 						mensaje.datos.persona.direccion);
-					printf("\tTelefono: %s\n", mensaje.datos.persona.telefono)
+					printf("\tTelefono: %s\n", mensaje.datos.persona.telefono);
 						break;
 				case ERROR:
 					printf("Mensaje de error recibido. \n");
